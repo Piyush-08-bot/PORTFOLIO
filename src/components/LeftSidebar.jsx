@@ -17,7 +17,7 @@ const LeftSidebar = () => {
                 </div>
 
                 <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8">
-                    {/* Profile Header - Clickable */}
+                    {}
                     <div
                         onClick={() => setIsModalOpen(true)}
                         className="flex items-center gap-4 cursor-pointer group hover:bg-white/5 p-2 -m-2 rounded-lg transition-colors"
@@ -32,14 +32,14 @@ const LeftSidebar = () => {
                         </div>
                     </div>
 
-                    {/* Bio */}
+                    {}
                     <div>
                         <p className="text-secondary text-base leading-relaxed">
                             I’m a full-stack developer focused on scalable systems, databases, and exploring AI.
                         </p>
                     </div>
 
-                    {/* Details List */}
+                    {}
                     <div className="space-y-5 text-sm">
                         <div className="flex items-center gap-3 text-secondary">
                             <Briefcase size={16} />
@@ -60,7 +60,7 @@ const LeftSidebar = () => {
                     </div>
 
                     <a
-                        // href="/resume.pdf"
+                        
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-between w-full px-4 py-3 border border-white/10 rounded-lg hover:border-white/30 transition-colors group"

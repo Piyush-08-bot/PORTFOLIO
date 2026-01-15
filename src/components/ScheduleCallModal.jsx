@@ -12,14 +12,14 @@ const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const ScheduleCallModal = ({ isOpen, onClose }) => {
-    // Selection State
+    
     const [selectedDate, setSelectedDate] = useState(null);
     const [selectedTime, setSelectedTime] = useState('');
 
-    // Calendar Navigation State
+    
     const [currentDate, setCurrentDate] = useState(new Date());
 
-    // Reset state when opening
+    
     useEffect(() => {
         if (isOpen) {
             setSelectedDate(null);
@@ -32,7 +32,7 @@ const ScheduleCallModal = ({ isOpen, onClose }) => {
         const year = date.getFullYear();
         const month = date.getMonth();
         const daysInMonth = new Date(year, month + 1, 0).getDate();
-        const firstDayOfMonth = new Date(year, month, 1).getDay(); // 0 is Sunday
+        const firstDayOfMonth = new Date(year, month, 1).getDay(); 
         return { daysInMonth, firstDayOfMonth };
     };
 
@@ -40,7 +40,7 @@ const ScheduleCallModal = ({ isOpen, onClose }) => {
 
     const handleDateClick = (day) => {
         const newDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
-        // Prevent selecting past dates
+        
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
@@ -97,17 +97,17 @@ Best regards,`;
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.95, opacity: 0 }}
                         onClick={(e) => e.stopPropagation()}
-                        className="bg-background border border-white/10 rounded-2xl w-full max-w-4xl shadow-2xl flex flex-col md:flex-row overflow-hidden max-h-[90vh]" // Wider Layout
+                        className="bg-background border border-white/10 rounded-2xl w-full max-w-4xl shadow-2xl flex flex-col md:flex-row overflow-hidden max-h-[90vh]" 
                     >
 
-                        {/* LEFT SIDE: CALENDAR */}
+                        {}
                         <div className="flex-1 p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/10 overflow-y-auto bg-white/[0.02]">
                             <h3 className="text-secondary font-mono text-xs uppercase tracking-wider mb-4 flex items-center gap-2">
                                 <CalendarIcon size={14} className="text-white" />
                                 Select a Date
                             </h3>
 
-                            {/* Calendar Header */}
+                            {}
                             <div className="flex items-center justify-between mb-6">
                                 <h2 className="text-xl font-bold text-white">
                                     {MONTHS[currentDate.getMonth()]} {currentDate.getFullYear()}
@@ -122,7 +122,7 @@ Best regards,`;
                                 </div>
                             </div>
 
-                            {/* Calendar Grid */}
+                            {}
                             <div className="grid grid-cols-7 mb-2">
                                 {DAYS.map(day => (
                                     <div key={day} className="text-center text-[10px] font-mono font-semibold text-secondary uppercase py-2">
@@ -131,12 +131,12 @@ Best regards,`;
                                 ))}
                             </div>
                             <div className="grid grid-cols-7 gap-2">
-                                {/* Empty slots for start of month */}
+                                {}
                                 {[...Array(firstDayOfMonth)].map((_, i) => (
                                     <div key={`empty-${i}`} />
                                 ))}
 
-                                {/* Days */}
+                                {}
                                 {[...Array(daysInMonth)].map((_, i) => {
                                     const day = i + 1;
                                     const currentDayDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
@@ -171,7 +171,7 @@ Best regards,`;
                             </div>
                         </div>
 
-                        {/* RIGHT SIDE: TIME SLOTS & SUMMARY */}
+                        {}
                         <div className="w-full md:w-[350px] bg-background p-6 md:p-8 flex flex-col">
                             <div className="flex justify-between items-start mb-6">
                                 <h3 className="text-secondary font-mono text-xs uppercase tracking-wider flex items-center gap-2">

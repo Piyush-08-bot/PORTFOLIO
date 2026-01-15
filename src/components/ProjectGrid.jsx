@@ -24,7 +24,7 @@ const ProjectGrid = ({ projects }) => {
                         className="group relative bg-surface border border-white/5 rounded-2xl overflow-hidden hover:border-white/10 transition-colors"
                     >
                         <div className="flex flex-col md:flex-row h-full">
-                            {/* Content Side (Left) */}
+                            {}
                             <div className="flex-1 p-8 sm:p-10 flex flex-col justify-center relative z-10">
                                 <div className="mb-6">
                                     <h3 className="text-3xl font-bold text-white mb-2">{project.title}</h3>
@@ -32,7 +32,7 @@ const ProjectGrid = ({ projects }) => {
                                         {project.description}
                                     </p>
 
-                                    {/* Tech Stack */}
+                                    {}
                                     <div className="flex flex-wrap gap-2 mb-8">
                                         {project.techStack.map((tech, i) => (
                                             <span key={i} className="px-3 py-1 bg-white/5 text-secondary text-xs font-mono rounded-full border border-white/5">
@@ -41,7 +41,7 @@ const ProjectGrid = ({ projects }) => {
                                         ))}
                                     </div>
 
-                                    {/* Buttons */}
+                                    {}
                                     <div className="flex gap-4">
                                         <a
                                             href={project.demoLink}
@@ -65,12 +65,12 @@ const ProjectGrid = ({ projects }) => {
                                 </div>
                             </div>
 
-                            {/* Visual Side (Right) */}
+                            {}
                             <div className="w-full md:w-[40%] h-[300px] md:h-auto relative bg-gradient-to-br from-black/20 to-black/0 overflow-hidden flex items-center justify-center">
-                                {/* Spotlight Effect */}
+                                {}
                                 <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-3xl rounded-full transform translate-x-12 -translate-y-12" />
 
-                                {/* Floating Icon */}
+                                {}
                                 <motion.img
                                     src={project.image}
                                     alt={project.title}
@@ -87,9 +87,9 @@ const ProjectGrid = ({ projects }) => {
                                     }}
                                 />
 
-                                {/* Hover Particle Effects (Bubbles) */}
+                                {}
                                 <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                                    {/* TeamSync Bubbles */}
+                                    {}
                                     {project.id === 1 && (
                                         <>
                                             <motion.div
@@ -104,7 +104,7 @@ const ProjectGrid = ({ projects }) => {
                                             />
                                         </>
                                     )}
-                                    {/* Crypture Coins/Orbs */}
+                                    {}
                                     {project.id === 2 && (
                                         <>
                                             <motion.div
@@ -114,7 +114,7 @@ const ProjectGrid = ({ projects }) => {
                                             />
                                         </>
                                     )}
-                                    {/* ProjectGenie Sparks */}
+                                    {}
                                     {project.id === 3 && (
                                         <>
                                             <motion.div

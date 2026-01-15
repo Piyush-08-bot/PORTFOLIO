@@ -6,7 +6,7 @@ const TabNavbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const sections = ['home', 'work', 'contact'];
-            const scrollPosition = window.scrollY + 100; // Offset for better detection
+            const scrollPosition = window.scrollY + 100; 
 
             for (const section of sections) {
                 const element = document.getElementById(section === 'home' ? '' : section);
@@ -23,7 +23,7 @@ const TabNavbar = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Initial check
+        handleScroll(); 
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);

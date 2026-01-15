@@ -1,8 +1,8 @@
 import React from 'react';
 
 const LineNumbers = () => {
-    // Generate many lines to ensure it covers the height
-    // Because it's absolute, it won't expansion the page
+    
+    
     const lines = Array.from({ length: 1000 }, (_, i) => i + 1);
 
     return (

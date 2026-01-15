@@ -6,11 +6,11 @@ import profileBusinessImg from '../assets/profile-business.jpg';
 const BusinessCardModal = ({ isOpen, onClose }) => {
     const [isFlipped, setIsFlipped] = useState(false);
 
-    // Reset flip state when modal opens
+    
     useEffect(() => {
         if (isOpen) {
             setIsFlipped(false);
-            const timer = setTimeout(() => setIsFlipped(true), 800); // Wait 0.8s then flip
+            const timer = setTimeout(() => setIsFlipped(true), 800); 
             return () => clearTimeout(timer);
         }
     }, [isOpen]);
@@ -44,7 +44,7 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                     className="relative w-full max-w-lg aspect-[1.58/1] rounded-xl shadow-2xl preserve-3d"
                     style={{ transformStyle: 'preserve-3d' }}
                 >
-                    {/* FRONT SIDE (Hello) */}
+                    {}
                     <div
                         className="absolute inset-0 backface-hidden bg-white border border-black/10 rounded-xl flex items-center justify-center"
                         style={{ backfaceVisibility: 'hidden' }}
@@ -61,7 +61,7 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                         </div>
                     </div>
 
-                    {/* BACK SIDE (Content) */}
+                    {}
                     <div
                         className="absolute inset-0 backface-hidden bg-white text-black border border-black/10 rounded-xl overflow-hidden"
                         style={{
@@ -72,7 +72,7 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                             backgroundPosition: '0 0, 15px 15px'
                         }}
                     >
-                        {/* Shine Effect */}
+                        {}
                         <motion.div
                             className="absolute top-0 -left-[100%] w-[80%] h-full bg-gradient-to-r from-transparent via-blue-400/20 to-transparent -skew-x-12 pointer-events-none z-10"
                             animate={{ left: ['-100%', '200%'] }}
@@ -85,7 +85,7 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                         />
 
                         <div className="h-full flex flex-col p-8 relative z-20">
-                            {/* Header: Avatar + Info */}
+                            {}
                             <div className="flex gap-6 items-center flex-1">
                                 <div className="w-24 h-24 rounded-full border-2 border-black/20 shadow-lg overflow-hidden shrink-0">
                                     <img src={profileBusinessImg} alt="Profile" className="w-full h-full object-cover scale-150 -translate-y-3 transition-all duration-500" />
@@ -100,17 +100,17 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                                 </div>
                             </div>
 
-                            {/* Middle: Brief Bio/Skills */}
+                            {}
                             <div className="mt-4 mb-8">
                                 <p className="text-zinc-600 text-sm leading-relaxed">
                                     Crafting digital experiences with a focus on motion, aesthetics, and user-centric design.
                                 </p>
                             </div>
 
-                            {/* Footer: Socials & Contact */}
+                            {}
                             <div className="flex items-end justify-between mt-auto border-t border-black/5 pt-6">
 
-                                {/* Left Down: LinkedIn & GitHub */}
+                                {}
                                 <div className="flex items-center gap-3">
                                     <a
                                         href="https://linkedin.com/in/piyush-raj-439930323/"
@@ -132,7 +132,7 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                                     </a>
                                 </div>
 
-                                {/* Down Right: Email */}
+                                {}
                                 <a
                                     href="mailto:piyush.raj24012006@gmail.com"
                                     className="flex items-center gap-2 text-xs font-mono text-zinc-600 hover:text-black transition-colors group"
@@ -146,7 +146,7 @@ const BusinessCardModal = ({ isOpen, onClose }) => {
                             </div>
                         </div>
 
-                        {/* Close Button (Now at end of container and z-50) */}
+                        {}
                         <button
                             onClick={onClose}
                             className="absolute top-4 right-4 p-1 rounded-full hover:bg-black/5 transition-colors z-50"

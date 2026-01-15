@@ -63,7 +63,7 @@ const SkillsSection = () => {
                             onMouseEnter={(e) => e.currentTarget.style.color = skill.color}
                             onMouseLeave={(e) => e.currentTarget.style.color = ''}
                         />
-                        {/* Tooltip for accessibility/visibility */}
+                        {}
                         <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-xs font-medium text-white pointer-events-none whitespace-nowrap">
                             {skill.name}
                         </span>

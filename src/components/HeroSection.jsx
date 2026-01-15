@@ -51,7 +51,7 @@ const HeroSection = () => {
             </div>
 
             <div className="flex justify-end mt-12">
-                {/* Placeholder for small toggle or status indicator if needed */}
+                {}
             </div>
         </section>
     );

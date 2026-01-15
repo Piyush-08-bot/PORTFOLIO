@@ -5,7 +5,7 @@ const BackgroundEffects = () => {
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
 
-    // Smooth spring animation for the spotlight
+    
     const springConfig = { damping: 25, stiffness: 150 };
     const x = useSpring(mouseX, springConfig);
     const y = useSpring(mouseY, springConfig);
@@ -22,7 +22,7 @@ const BackgroundEffects = () => {
 
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-            {/* Spotlight Effect */}
+            {}
             <motion.div
                 className="absolute rounded-full bg-white/10 blur-[120px]"
                 style={{
@@ -30,12 +30,12 @@ const BackgroundEffects = () => {
                     height: 600,
                     x,
                     y,
-                    top: -300, // Center the div on cursor
-                    left: -300, // Center the div on cursor
+                    top: -300, 
+                    left: -300, 
                 }}
             />
 
-            {/* Noise Texture */}
+            {}
             <div
                 className="absolute inset-0 opacity-[0.05] mix-blend-overlay"
                 style={{
@@ -43,7 +43,7 @@ const BackgroundEffects = () => {
                 }}
             />
 
-            {/* Subtle Static Gradients for depth (dimmed) */}
+            {}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/5 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-900/5 rounded-full blur-[150px] -translate-x-1/3 translate-y-1/3" />
         </div>
